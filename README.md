@@ -6,7 +6,9 @@ _The purpose of this application is to take a number from the user and output a 
 * _Spec: The program returns a range of numbers from 0 to the users inputted number._
     * Input: "5"
     * Output: "0, 1, 2, 3, 4, 5"
-
+* _Spec: The program returns "Beep" for a number that contains the number 1 in its digits._
+    * Input: "1"
+    * Output: "Beep"
 ## Setup/Installation Requirements
 _Clone this repository._
 

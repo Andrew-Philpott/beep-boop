@@ -10,7 +10,18 @@ $(document).ready(function() {
   function beepBoop(numberArg) {
     var transformedInputs = [];
     for (var i = 0; i <= numberArg; i++) {
-      transformedInputs.push(i);
+      var indexToDigits = i.toString().split();
+      var containsNumberOneBool = false;
+      for (var j = 0; j < indexToDigits.length; j++) {
+        if (indexToDigits[j] === "1") {
+          containsNumberOneBool = true;
+        }
+      }
+      if (containsNumberOneBool) {
+        transformedInputs.push("Beep");
+      } else {
+        transformedInputs.push(i);
+      }
     }
     return transformedInputs.toString();
   }
