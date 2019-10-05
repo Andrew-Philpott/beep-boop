@@ -30,12 +30,16 @@ $(document).ready(function() {
         containsNumberThreeBool = false;
         containsNumberTwoBool = false;
         containsNumberOneBool = false;
-      } else if (containsNumberOneBool) {
-        transformedInputs.push("Beep");
-        containsNumberOneBool = false;
       } else if (containsNumberTwoBool) {
         transformedInputs.push("Boop");
+        containsNumberThreeBool = false;
         containsNumberTwoBool = false;
+        containsNumberOneBool = false;
+      } else if (containsNumberOneBool) {
+        transformedInputs.push("Beep");
+        containsNumberThreeBool = false;
+        containsNumberTwoBool = false;
+        containsNumberOneBool = false;
       } else {
         transformedInputs.push(i);
       }

@@ -18,7 +18,10 @@ _The purpose of this application is to take a number from the user and output a 
 * _Spec: The program returns "I'm sorry, Dave. I'm afraid I can't do that." for a number that contains both 3 and 1 in its digits._
     * Input: "13"
     * Output: "I'm sorry, Dave. I'm afraid I can't do that."
-
+* _Spec: The program returns "Boop" for a number that contains both 2 and 1 in its digits._
+    * Input: "12"
+    * Output: "Boop"
+    
 ## Setup/Installation Requirements
 _Clone this repository._
 
