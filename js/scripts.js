@@ -34,10 +34,17 @@ $(document).ready(function() {
         }
       }
       if (containsNumberThreeBool) {
-        transformedInputs.push("I'm sorry, " + nameArg + ". I'm afraid I can't do that.");
-        containsNumberThreeBool = false;
-        containsNumberTwoBool = false;
-        containsNumberOneBool = false;
+        if (i % 3 === 0) {
+          transformedInputs.push("I'm sorry, " + nameArg + ". I'm afraid I can't do that.");
+          containsNumberThreeBool = false;
+          containsNumberTwoBool = false;
+          containsNumberOneBool = false;
+        } else {
+          transformedInputs.push("I'm sorry, Dave. I'm afraid I can't do that.");
+          containsNumberThreeBool = false;
+          containsNumberTwoBool = false;
+          containsNumberOneBool = false;
+        }
       } else if (containsNumberTwoBool) {
         transformedInputs.push("Boop");
         containsNumberThreeBool = false;
