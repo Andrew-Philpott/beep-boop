@@ -1,20 +1,17 @@
 $(document).ready(function() {
-  $("#result button").click(function() {
-    $("#result p").text(reverseString($("#result p").text()));
-  });
   $("#user-input form").submit(function(event) {
     event.preventDefault();
-    var userInputValue = parseInt($("#user-number-input").val());
-    var output = beepBoop(userInputValue);
+    var userNumberValue = parseInt($("#user-number-input").val());
+    var userNameValue = $("#user-name-input").val();
+    output = beepBoop(userNumberValue, userNameValue);
+    if ($("#reverse-sequence:checked").val()) {
+      output = output.reverse();
+    }
     $("#result p").text("");
     $("#result").show();
-    $("#result p").text(output);
+    $("#result p").text(output.toString());
   });
-  function reverseString(stringArg) {
-    var strings = stringArg.split(",");
-    return strings.reverse().toString();
-  }
-  function beepBoop(numberArg) {
+  function beepBoop(numberArg, nameArg) {
     var transformedInputs = [];
     for (var i = 0; i <= numberArg; i++) {
       var indexToDigits = i.toString().split("");
@@ -33,7 +30,7 @@ $(document).ready(function() {
         }
       }
       if (containsNumberThreeBool) {
-        transformedInputs.push("I'm sorry, Dave. I'm afraid I can't do that.");
+        transformedInputs.push("I'm sorry, " + nameArg + ". I'm afraid I can't do that.");
         containsNumberThreeBool = false;
         containsNumberTwoBool = false;
         containsNumberOneBool = false;
@@ -51,6 +48,6 @@ $(document).ready(function() {
         transformedInputs.push(i);
       }
     }
-    return transformedInputs.toString();
+    return transformedInputs;
   }
-})
+});
