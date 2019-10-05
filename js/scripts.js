@@ -1,4 +1,7 @@
 $(document).ready(function() {
+  $("#result button").click(function() {
+    $("#result p").text(reverseString($("#result p").text()));
+  });
   $("#user-input form").submit(function(event) {
     event.preventDefault();
     var userInputValue = parseInt($("#user-number-input").val());
@@ -7,6 +10,10 @@ $(document).ready(function() {
     $("#result").show();
     $("#result p").text(output);
   });
+  function reverseString(stringArg) {
+    var strings = stringArg.split(",");
+    return strings.reverse().toString();
+  }
   function beepBoop(numberArg) {
     var transformedInputs = [];
     for (var i = 0; i <= numberArg; i++) {
