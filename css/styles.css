@@ -1,6 +1,9 @@
 #result {
   display: none;
 }
+.jumbotron {
+  background-color: lightblue;
+}
 .error {
   color: red;
 }

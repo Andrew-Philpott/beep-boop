@@ -46,7 +46,7 @@ _Clone this repository._
 _Open index.html with a web browser._
 
 ## Support and contact details
-_Issues or concerns? Contact me at andrewphilpott02@gmail.com. I will try to get back to you as soon as I am able._
+_Issues or concerns? Contact me at andrewphilpott92@gmail.com. I will try to get back to you as soon as I am able._
 
 ## Technologies Used
 _HTML_<br>
