@@ -13,13 +13,14 @@ $(document).ready(function() {
       var indexToDigits = i.toString().split();
       var containsNumberOneBool = false;
       var containsNumberTwoBool = false;
+      var containsNumberThreeBool = false;
       for (var j = 0; j < indexToDigits.length; j++) {
         if (indexToDigits[j] === "1") {
           containsNumberOneBool = true;
         } else if (indexToDigits[j] === "2") {
           containsNumberTwoBool = true;
-        } else {
-
+        } else if (indexToDigits[j] === "3") {
+          containsNumberThreeBool = true;
         }
       }
       if (containsNumberOneBool) {
@@ -28,6 +29,9 @@ $(document).ready(function() {
       } else if (containsNumberTwoBool) {
         transformedInputs.push("Boop");
         containsNumberTwoBool = false;
+      } else if (containsNumberThreeBool) {
+        transformedInputs.push("I'm sorry, Dave. I'm afraid I can't do that.");
+        containsNumberThreeBool = false;
       } else {
         transformedInputs.push(i);
       }

@@ -12,6 +12,9 @@ _The purpose of this application is to take a number from the user and output a 
 * _Spec: The program returns "Boop" for a number that contains the number 2 in its digits._
     * Input: "2"
     * Output: "Boop"
+* _Spec: The program returns "I'm sorry, Dave. I'm afraid I can't do that." for a number that contains the number 3 in its digits._
+    * Input: "3"
+    * Output: "I'm sorry, Dave. I'm afraid I can't do that."
 ## Setup/Installation Requirements
 _Clone this repository._
 
