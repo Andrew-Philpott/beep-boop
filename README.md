@@ -9,6 +9,9 @@ _The purpose of this application is to take a number from the user and output a 
 * _Spec: The program returns "Beep" for a number that contains the number 1 in its digits._
     * Input: "1"
     * Output: "Beep"
+* _Spec: The program returns "Boop" for a number that contains the number 2 in its digits._
+    * Input: "2"
+    * Output: "Boop"
 ## Setup/Installation Requirements
 _Clone this repository._
 

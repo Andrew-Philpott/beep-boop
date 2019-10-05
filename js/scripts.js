@@ -12,13 +12,22 @@ $(document).ready(function() {
     for (var i = 0; i <= numberArg; i++) {
       var indexToDigits = i.toString().split();
       var containsNumberOneBool = false;
+      var containsNumberTwoBool = false;
       for (var j = 0; j < indexToDigits.length; j++) {
         if (indexToDigits[j] === "1") {
           containsNumberOneBool = true;
+        } else if (indexToDigits[j] === "2") {
+          containsNumberTwoBool = true;
+        } else {
+
         }
       }
       if (containsNumberOneBool) {
         transformedInputs.push("Beep");
+        containsNumberOneBool = false;
+      } else if (containsNumberTwoBool) {
+        transformedInputs.push("Boop");
+        containsNumberTwoBool = false;
       } else {
         transformedInputs.push(i);
       }
