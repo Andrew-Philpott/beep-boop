@@ -3,13 +3,17 @@ $(document).ready(function() {
     event.preventDefault();
     var userNumberValue = parseInt($("#user-number-input").val());
     var userNameValue = $("#user-name-input").val();
-    output = beepBoop(userNumberValue, userNameValue);
-    if ($("#reverse-sequence:checked").val()) {
-      output = output.reverse();
+    var userNameValidatedBool = checkNameInput(userNameValue);
+    var userNumberValidatedBool = checkNumberInput(userNumberValue);
+    if (userNameValidatedBool && userNameValidatedBool) {
+      output = beepBoop(userNumberValue, userNameValue);
+      if ($("#reverse-sequence:checked").val()) {
+        output = output.reverse();
+      }
+      $("#result p").text("");
+      $("#result").show();
+      $("#result p").text(output.toString());
     }
-    $("#result p").text("");
-    $("#result").show();
-    $("#result p").text(output.toString());
   });
   function beepBoop(numberArg, nameArg) {
     var transformedInputs = [];
@@ -50,4 +54,21 @@ $(document).ready(function() {
     }
     return transformedInputs;
   }
+function checkNameInput(nameInputArg) {
+  if (nameInputArg === "") {
+    $("#name-container p").remove();
+    $("#name-container").append("<p class='error'>Please enter a name.</p>");
+    return false;
+  } else {
+    return true;
+  }
+}
+function checkNumberInput(numberInputArg) {
+  if (numberInputArg === "" || isNaN(numberInputArg)) {
+    $("#number-container p").remove();
+    $("#number-container").append("<p class='error'>Please enter a number.</p>");
+    return false;
+  }
+  return true;
+}
 });
