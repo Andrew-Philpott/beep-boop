@@ -10,28 +10,32 @@ $(document).ready(function() {
   function beepBoop(numberArg) {
     var transformedInputs = [];
     for (var i = 0; i <= numberArg; i++) {
-      var indexToDigits = i.toString().split();
+      var indexToDigits = i.toString().split("");
       var containsNumberOneBool = false;
       var containsNumberTwoBool = false;
       var containsNumberThreeBool = false;
-      for (var j = 0; j < indexToDigits.length; j++) {
+      for (var j = 0; j <= indexToDigits.length; j++) {
         if (indexToDigits[j] === "1") {
           containsNumberOneBool = true;
         } else if (indexToDigits[j] === "2") {
           containsNumberTwoBool = true;
         } else if (indexToDigits[j] === "3") {
           containsNumberThreeBool = true;
+        } else {
+
         }
       }
-      if (containsNumberOneBool) {
+      if (containsNumberThreeBool) {
+        transformedInputs.push("I'm sorry, Dave. I'm afraid I can't do that.");
+        containsNumberThreeBool = false;
+        containsNumberTwoBool = false;
+        containsNumberOneBool = false;
+      } else if (containsNumberOneBool) {
         transformedInputs.push("Beep");
         containsNumberOneBool = false;
       } else if (containsNumberTwoBool) {
         transformedInputs.push("Boop");
         containsNumberTwoBool = false;
-      } else if (containsNumberThreeBool) {
-        transformedInputs.push("I'm sorry, Dave. I'm afraid I can't do that.");
-        containsNumberThreeBool = false;
       } else {
         transformedInputs.push(i);
       }
