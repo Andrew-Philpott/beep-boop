@@ -9,19 +9,24 @@
   </head>
   <body>
     <div class="container">
+      <div class="jumbotron">
+        <h1>Beep Boop</h1>
+      </div>
       <div class="row">
         <div class="col-xs-12">
-          <div class="jumbotron">
-            <h1>Beep Boop</h1>
-          </div>
+          <p>Enter a name and number to return a beep boop sequence from 0 to your number with some responses addressed to you or <i>Dave.<i></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6">
           <div id="user-input">
             <form>
               <div id="name-container" class="form-group">
-                <label for="user-name-input">Enter your name</label>
+                <label for="user-name-input">Name</label>
                 <input type="text" class="form-control" id="user-name-input">
               </div>
               <div id="number-container" class="form-group">
-                <label for="user-number-input">Enter a number</label>
+                <label for="user-number-input">Number</label>
                 <input type="text" class="form-control" id="user-number-input">
               </div>
               <div class="form-check">
@@ -30,13 +35,19 @@
                   Reverse Seqeunce
                 </label>
               </div>
+              <br>
               <button type="submit" class="btn" name="button">Submit</button>
             </form>
           </div>
-          <div id="result">
-            <p></p>
-          </div>
         </div>
+        <div class="col-xs-6">
+          <img src="img/robot.jpg" alt="">
+        </div>
+      </div>
+      <div id="result">
+        <h2>Beep Boop Sequence</h2>
+        <br>
+        <p></p>
       </div>
     </div>
   </body>

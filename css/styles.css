@@ -4,3 +4,12 @@
 .error {
   color: red;
 }
+img {
+  width: 100%;
+}
+.beep {
+  color: blue;
+}
+.boop {
+  color: red;
+}

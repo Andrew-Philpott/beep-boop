@@ -6,13 +6,32 @@ $(document).ready(function() {
     var userNameValidatedBool = checkNameInput(userNameValue);
     var userNumberValidatedBool = checkNumberInput(userNumberValue);
     if (userNameValidatedBool && userNameValidatedBool) {
-      output = beepBoop(userNumberValue, userNameValue);
-      if ($("#reverse-sequence:checked").val()) {
-        output = output.reverse();
-      }
       $("#result p").text("");
+      outputs = beepBoop(userNumberValue, userNameValue);
+      if ($("#reverse-sequence:checked").val()) {
+        outputs = outputs.reverse();
+      }
+      for (var i = 0; i < outputs.length; i++) {
+        if (i === outputs.length-1) {
+          if (outputs[i].toString() === "Beep") {
+            $("#result p").append("<span class='beep'>" + outputs[i].toString() + "</span>");
+          }
+          else if (outputs[i].toString() === "Boop") {
+            $("#result p").append("<span class='boop'>" + outputs[i].toString() + "</span>");
+          } else {
+            $("#result p").append(outputs[i].toString());
+          }
+        } else {
+          if (outputs[i].toString() === "Beep") {
+            $("#result p").append("<span class='beep'>" + outputs[i].toString() + "</span>"+ ", ");
+          } else if (outputs[i].toString() === "Boop") {
+            $("#result p").append("<span class='boop'>" + outputs[i].toString() + "</span>"+ ", ");
+          } else {
+            $("#result p").append(outputs[i].toString() + ", ")
+          }
+        }
+      }
       $("#result").show();
-      $("#result p").text(output.toString());
     }
   });
   function beepBoop(numberArg, nameArg) {

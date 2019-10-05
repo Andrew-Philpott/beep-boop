@@ -29,10 +29,17 @@ _The purpose of this application is to take a number and a name from the user an
     * Output: "Please enter a name."
 * _Spec: The program outputs an error message in red "Please enter a number" under the number input for when the input is left blank._
     * Input: ""
-    * Output: "Please enter a number."
+    * Output: "<span style="color:red">Please enter a number.</span>"
 * _Spec: The program reverses and outputs to the user the transformed sequence based off the number provided._
     * Input: "5" "Andrew" "checked"
     * Output: "5, 4, I'm sorry Andrew. I'm afraid I can't do that., Boop, Beep, 0"
+* _Spec: The program adds the color blue to "Beep" text after submitting a name and number._
+    * Input: "1"
+    * Output: "0, <span style="color:blue">Beep</span>"
+* _Spec: The program adds the color red to "Boop" text after submitting a name and number._
+    * Input: "2"
+    * Output: "0, Beep, <span style="color:red">Boop</span>"
+
 ## Setup/Installation Requirements
 _Clone this repository._
 
